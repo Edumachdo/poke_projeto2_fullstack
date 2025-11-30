@@ -1,0 +1,79 @@
+Proposta do Projeto 2
+AS64A - Programa¸ c˜ ao Web Fullstack
+Prof. Willian Massami Watanabe
+1 Descri¸ c˜ ao do projeto
+O Projeto 2 da disciplina de Programac ¸ ˜ao Web Fullstack ser ´a realizada por meio da
+implementac ¸˜ao de um projeto de aplicac ¸˜ao web. O projeto considera o desenvolvimento de
+uma aplicac ¸˜ao web em 3 camadas: Front-end, Back-end HTTP e Banco de dados. Os alunos
+devem implementar o projeto em grupos de at´e 2 pessoas.
+2 Requisitos funcionais
+O projeto deve implementar os seguintes requisitos funcionais:
+1. Login;
+2. Busca;
+3. Inserc ¸˜ao.
+As funcionalidades de Busca e Inserc ¸˜ao devem ser realizadas considerando as tem ´aticas
+selecionadas no PROJETO 1. Nesse sentido, os dados de busca e inserc ¸˜ao devem ser similares
+aos dados recuperados das APIs no PROJETO 1.
+Apenas usu´arios com sess˜ao ativa no sistema (logados) podem realizar busca e inserc ¸˜ao. O
+sistema pode conter um conjunto de usu ´arios inseridos no banco, para realizar o Login. N ˜ao
+h´a a necessidade de implementar rotinas de inserc ¸˜ao de usu´arios pela aplicac ¸˜ao web.
+3 Arquitetura do sistema
+O sistema deve ser implementado com 3 camadas. A seguir, s˜ao detalhados requisitos t´ecnicos,
+considerando cada camada do sistema:
+Front-end : deve ser implementado utilizando a biblioteca de front-end React.js. Toda a
+comunicac ¸˜ao com o Back-end deve ser realizada por meio de requisic ¸ ˜oes HTTP , carac-
+terizando uma Single-Page Application- SPA;
+Back-end HTTP : deve ser implementado utilizando Express.js. A comunicac ¸˜ao com o Front-
+end deve seguir o padr ˜ao de rotas Restful. Esse servidor ter ´a acesso direto ao banco de
+dados;
+Banco de dados : pode ser utilizado qualquer sistema de gerenciamento de banco de dados
+da escolha dos alunos.
+
+---PAGE_BREAK---
+
+4 Estrutura do Projeto
+O projeto deve ser armazenado em um ´unico reposit ´orio de c ´odigo fonte, com duas pastas
+separadas. Uma para a aplicac ¸˜ao do Back-End (backend) e outra para o Front-End (frontend).
+Na pasta da aplicac ¸˜ao do Back-End, a pasta dos c ´odigos-fontes do projeto deve apresentar
+APENAS as seguintes pastas:
+• src/routes: com os arquivos de rotas da aplicac ¸˜ao. Na definic ¸˜ao das rotas, deve ser inse-
+rido o c´odigo dos controladores. Os controladores n˜ao devem ser inseridos em uma pasta
+separada;
+• src/models: com arquivos que definem as classes de acesso ao banco de dados;
+• src/config: com arquivos de configurac ¸˜ao do banco de dados, servidores de cache, entre
+outros.
+Na pasta da aplicac ¸˜ao do Front-End, a estrutura de arquivos deve seguir a mesma definida
+no PROJETO 1.
+5 Crit´ erios de avalia¸ c˜ ao
+Qualquer biblioteca utilizada n ˜ao aprovada previamente pelo professor ser ´a desconsiderada
+da avaliac ¸˜ao. Se for constatada c ´opia de artefatos de outros projetos, ser´a atribu´ıda nota zero.
+O projeto dever´ a ser executado e apresentado no laborat´ orio P102, em uma das m´ aquinas
+dispon´ ıveis dentro do laborat´ orio (Linux).. Na apresentac ¸ ˜ao, devem ser apresentados o
+c´odigo-fonte (tirando poss ´ıveis d ´uvidas do professor), a execuc ¸˜ao do projeto e as funciona-
+lidades implementadas.
+Os crit´erios de avaliac ¸˜ao desse projeto s˜ao definidos a seguir:
+• Implementac ¸˜ao de cada requisito (Login, Busca e Inserc ¸ ˜ao) no Frontend com React.js,
+utilizando a mesma estrutura do PROJETO 1.
+• Implementac ¸˜ao de cada requisito (Login, Busca e Inserc ¸˜ao) no Backend com Express.js,
+utilizando a estrutura de pastas definida nesta proposta.
+• Verificac ¸˜ao de preenchimento de campos no servidor.
+• Envio de mensagens de validac ¸˜ao do servidor.
+• Implementac ¸˜ao do padr˜ao REST na API desenvolvida.
+• Implementac ¸˜ao de regras de seguranc ¸a associadas`as seguintes categorias de ataques de
+aplicac ¸˜oes web:
+– Falhas de criptografia (uso de HTTPS e armazenamento de senhas utilizando crip-
+tografia);
+– Injec ¸˜ao (uso de sanitizers de par ˆametros, prevevir ataques de SQL/NoSQL inject e
+XSS);
+– Falhas de identificac ¸˜ao e autenticac ¸˜ao (prevenir ataques automatizados, invalidar
+corretamente tokens de autenticac ¸˜ao);
+– Falhas de registro e monitoramento de seguranc ¸a (registrar erros de autenticac ¸˜ao,
+buscas e postagens em logs).
+• Implementac ¸˜ao de otimizac ¸˜ao do Front-end:
+
+---PAGE_BREAK---
+
+– Compress˜ao de arquivos est´ativos;
+– Compress˜ao de respostas do servidor.
+• Implementac ¸˜ao da estrat´egia de cache no Back-end.
+• Configurac ¸˜ao do padr˜ao de pool de conex˜oes.

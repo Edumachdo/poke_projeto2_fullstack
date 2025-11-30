@@ -1,0 +1,128 @@
+/* App styles */
+.app-container {
+  min-height: 100vh;
+  max-width: 1500px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.app-paper {
+  padding: 2rem 3rem;
+  width: 100%;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.app-paper-single {
+  max-width: 600px;
+}
+
+.app-header {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.app-grid {
+  justify-content: center;
+}
+
+.app-loading {
+  text-align: center;
+  padding: 32px 0;
+}
+
+.app-footer {
+  margin-top: 48px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.body2 {
+  font-size: 1.2rem;
+  color: #f2f2f2 !important;
+}
+
+/* SearchForm styles */
+.search-form-paper {
+  padding: 16px;
+}
+
+.search-form-box {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+/* Legacy styles */
+#root {
+  max-width: 1425px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.add-pokemon-button {
+  margin-bottom: 2rem !important;
+}
+
+.pokemon-table-container {
+  margin-top: 1rem;
+}
+
+.pokemon-table > thead > tr > th {
+  text-transform: uppercase;
+  font-weight: bold !important;
+}
+
+.pokemon-table td,
+.pokemon-table th {
+  padding: 8px 16px; /* Added padding for better spacing */
+}
+
+.pokemon-table td:nth-child(4) {
+  text-transform: uppercase;
+}
+
+.pokemon-table td:nth-child(3) {
+  text-transform: capitalize;
+}
+
+.pokemon-icon > div > img {
+  height: 4rem;
+}
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.read-the-docs {
+  color: #888;
+}
