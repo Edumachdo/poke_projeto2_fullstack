@@ -1488,3 +1488,93 @@
 2025-11-30T19:18:47.137Z - Response: 200 for GET /api/pokemon?page=2&limit=30&_=1764530327127
 2025-11-30T19:18:50.888Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764530330880 - Body: {}
 2025-11-30T19:18:50.888Z - Response: 200 for GET /api/pokemon?page=1&limit=30&_=1764530330880
+2025-12-01T00:19:31.127Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764548371104 - Body: {}
+2025-12-01T00:19:31.139Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764548371118 - Body: {}
+2025-12-01T00:19:31.127Z - Response: 200 for GET /api/pokemon?page=1&limit=30&_=1764548371104
+2025-12-01T00:19:31.139Z - Response: 200 for GET /api/pokemon?page=1&limit=30&_=1764548371118
+2025-12-01T18:05:23.461Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764612323431 - Body: {}
+2025-12-01T18:05:23.461Z - Response: 401 for GET /api/pokemon?page=1&limit=30&_=1764612323431
+2025-12-01T18:05:23.505Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764612323434 - Body: {}
+2025-12-01T18:05:23.505Z - Response: 401 for GET /api/pokemon?page=1&limit=30&_=1764612323434
+2025-12-01T18:05:36.283Z - ::1 - Guest - POST /api/auth/login - Body: {"email":"test@example.com","password":"REDACTED"}
+2025-12-01T18:05:36.283Z - Response: 200 for POST /api/auth/login
+2025-12-01T18:05:36.499Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764612336454 - Body: {}
+2025-12-01T18:05:36.499Z - Response: 200 for GET /api/pokemon?page=1&limit=30&_=1764612336454
+2025-12-01T18:05:36.522Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764612336454 - Body: {}
+2025-12-01T18:05:36.522Z - Response: 304 for GET /api/pokemon?page=1&limit=30&_=1764612336454
+2025-12-01T18:05:50.093Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764612350059 - Body: {}
+2025-12-01T18:05:50.093Z - Response: 200 for GET /api/pokemon?page=1&limit=30&_=1764612350059
+2025-12-01T18:05:50.101Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764612350059 - Body: {}
+2025-12-01T18:05:50.101Z - Response: 304 for GET /api/pokemon?page=1&limit=30&_=1764612350059
+2025-12-01T18:07:21.818Z - ::1 - Guest - POST /api/auth/login - Body: {"email":"test@example.com","password":"REDACTED"}
+2025-12-01T18:07:21.818Z - Response: 200 for POST /api/auth/login
+2025-12-01T18:07:21.991Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764612441924 - Body: {}
+2025-12-01T18:07:21.995Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764612441925 - Body: {}
+2025-12-01T18:07:21.991Z - Response: 200 for GET /api/pokemon?page=1&limit=30&_=1764612441924
+2025-12-01T18:07:21.995Z - Response: 200 for GET /api/pokemon?page=1&limit=30&_=1764612441925
+2025-12-01T18:09:23.105Z - ::1 - Guest - POST /api/auth/register - Body: {"email":"teste@teste.com","password":"REDACTED"}
+2025-12-01T18:09:23.105Z - Response: 201 for POST /api/auth/register
+2025-12-01T18:09:52.482Z - ::1 - Guest - POST /api/auth/login - Body: {"email":"teste@teste.com","password":"REDACTED"}
+2025-12-01T18:09:52.482Z - Response: 200 for POST /api/auth/login
+2025-12-01T18:09:52.622Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764612592586 - Body: {}
+2025-12-01T18:09:52.623Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764612592587 - Body: {}
+2025-12-01T18:09:52.622Z - Response: 200 for GET /api/pokemon?page=1&limit=30&_=1764612592586
+2025-12-01T18:09:52.623Z - Response: 200 for GET /api/pokemon?page=1&limit=30&_=1764612592587
+2025-12-01T18:10:16.410Z - ::1 - Guest - GET /api/pokemon?page=2&limit=30&_=1764612616400 - Body: {}
+2025-12-01T18:10:16.410Z - Response: 200 for GET /api/pokemon?page=2&limit=30&_=1764612616400
+2025-12-01T18:10:17.372Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764612617364 - Body: {}
+2025-12-01T18:10:17.372Z - Response: 200 for GET /api/pokemon?page=1&limit=30&_=1764612617364
+2025-12-01T18:10:31.965Z - ::1 - Guest - GET /api/pokemon?page=2&limit=30&_=1764612631957 - Body: {}
+2025-12-01T18:10:31.965Z - Response: 200 for GET /api/pokemon?page=2&limit=30&_=1764612631957
+2025-12-01T18:10:33.432Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764612633425 - Body: {}
+2025-12-01T18:10:33.432Z - Response: 200 for GET /api/pokemon?page=1&limit=30&_=1764612633425
+2025-12-01T18:10:41.976Z - ::1 - Guest - POST /api/pokemon - Body: {"id":1,"name":"asdf","data":{"types":[{"type":{"name":"water"}}]}}
+2025-12-01T18:10:41.976Z - Response: 201 for POST /api/pokemon
+2025-12-01T18:10:43.533Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764612643489 - Body: {}
+2025-12-01T18:10:43.535Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764612643490 - Body: {}
+2025-12-01T18:10:43.533Z - Response: 200 for GET /api/pokemon?page=1&limit=30&_=1764612643489
+2025-12-01T18:10:43.535Z - Response: 200 for GET /api/pokemon?page=1&limit=30&_=1764612643490
+2025-12-01T18:11:06.890Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764612666857 - Body: {}
+2025-12-01T18:11:06.890Z - Response: 200 for GET /api/pokemon?page=1&limit=30&_=1764612666857
+2025-12-01T18:11:06.897Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764612666857 - Body: {}
+2025-12-01T18:11:06.897Z - Response: 304 for GET /api/pokemon?page=1&limit=30&_=1764612666857
+2025-12-01T18:11:08.801Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764612668769 - Body: {}
+2025-12-01T18:11:08.805Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764612668770 - Body: {}
+2025-12-01T18:11:08.801Z - Response: 200 for GET /api/pokemon?page=1&limit=30&_=1764612668769
+2025-12-01T18:11:08.805Z - Response: 200 for GET /api/pokemon?page=1&limit=30&_=1764612668770
+2025-12-01T18:11:09.847Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764612669819 - Body: {}
+2025-12-01T18:11:09.848Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764612669820 - Body: {}
+2025-12-01T18:11:09.847Z - Response: 200 for GET /api/pokemon?page=1&limit=30&_=1764612669819
+2025-12-01T18:11:09.848Z - Response: 200 for GET /api/pokemon?page=1&limit=30&_=1764612669820
+2025-12-01T18:11:11.504Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764612671495 - Body: {}
+2025-12-01T18:11:11.505Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764612671496 - Body: {}
+2025-12-01T18:11:11.504Z - Response: 200 for GET /api/pokemon?page=1&limit=30&_=1764612671495
+2025-12-01T18:11:11.505Z - Response: 200 for GET /api/pokemon?page=1&limit=30&_=1764612671496
+2025-12-01T18:11:12.286Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764612672277 - Body: {}
+2025-12-01T18:11:12.288Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764612672278 - Body: {}
+2025-12-01T18:11:12.286Z - Response: 200 for GET /api/pokemon?page=1&limit=30&_=1764612672277
+2025-12-01T18:11:12.288Z - Response: 200 for GET /api/pokemon?page=1&limit=30&_=1764612672278
+2025-12-01T18:11:13.988Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764612673956 - Body: {}
+2025-12-01T18:11:13.988Z - Response: 200 for GET /api/pokemon?page=1&limit=30&_=1764612673956
+2025-12-01T18:11:13.998Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764612673956 - Body: {}
+2025-12-01T18:11:13.998Z - Response: 304 for GET /api/pokemon?page=1&limit=30&_=1764612673956
+2025-12-01T18:11:20.655Z - ::1 - Guest - DELETE /api/pokemon/1 - Body: {}
+2025-12-01T18:11:20.655Z - Response: 200 for DELETE /api/pokemon/1
+2025-12-01T18:11:20.668Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764612680663 - Body: {}
+2025-12-01T18:11:20.668Z - Response: 200 for GET /api/pokemon?page=1&limit=30&_=1764612680663
+2025-12-01T18:11:23.606Z - ::1 - Guest - DELETE /api/pokemon/10 - Body: {}
+2025-12-01T18:11:23.606Z - Response: 200 for DELETE /api/pokemon/10
+2025-12-01T18:11:23.617Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764612683613 - Body: {}
+2025-12-01T18:11:23.617Z - Response: 200 for GET /api/pokemon?page=1&limit=30&_=1764612683613
+2025-12-01T18:11:25.385Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764612685378 - Body: {}
+2025-12-01T18:11:25.385Z - Response: 200 for GET /api/pokemon?page=1&limit=30&_=1764612685378
+2025-12-01T18:11:25.393Z - ::1 - Guest - GET /api/pokemon?page=1&limit=30&_=1764612685378 - Body: {}
+2025-12-01T18:11:25.393Z - Response: 304 for GET /api/pokemon?page=1&limit=30&_=1764612685378
+2025-12-01T18:12:17.756Z - ::1 - Guest - GET /api/pokemon?search=char&_=1764612737750 - Body: {}
+2025-12-01T18:12:17.756Z - Response: 200 for GET /api/pokemon?search=char&_=1764612737750
+2025-12-01T18:12:21.479Z - ::1 - Guest - GET /api/pokemon?search=a&_=1764612741475 - Body: {}
+2025-12-01T18:12:21.479Z - Response: 200 for GET /api/pokemon?search=a&_=1764612741475
+2025-12-01T18:12:26.630Z - ::1 - Guest - GET /api/pokemon?search=34&_=1764612746624 - Body: {}
+2025-12-01T18:12:26.630Z - Response: 200 for GET /api/pokemon?search=34&_=1764612746624
+2025-12-01T18:12:31.084Z - ::1 - Guest - GET /api/pokemon?search=11&_=1764612751078 - Body: {}
+2025-12-01T18:12:31.084Z - Response: 200 for GET /api/pokemon?search=11&_=1764612751078
