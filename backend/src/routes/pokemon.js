@@ -54,6 +54,31 @@ router.get(
   }
 );
 
+// GET /api/pokemon/:id
+router.get(
+  "/:id",
+  param("id").isInt().withMessage("ID must be an integer"),
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
+
+    const { id } = req.params;
+
+    try {
+      const pokemon = await Pokemon.findById(id);
+      if (!pokemon) {
+        return res.status(404).json({ error: "Pokémon not found" });
+      }
+      res.json(pokemon);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: "Internal server error" });
+    }
+  }
+);
+
 // POST /api/pokemon
 router.post(
   "/",

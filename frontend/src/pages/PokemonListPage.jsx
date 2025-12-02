@@ -36,34 +36,41 @@ function PokemonListPage() {
   const navigate = useNavigate();
   const location = useLocation();
   const auth = useAuth();
-  const { pokemonData, loading: searchLoading, error: searchError } = useSearch();
+  const {
+    pokemonData,
+    loading: searchLoading,
+    error: searchError,
+  } = useSearch();
 
-  const fetchPokemon = useCallback(async (page) => {
-    if (!auth.isAuthenticated) {
-      setInitialLoading(false);
-      return;
-    }
-    try {
-      setInitialLoading(true);
-      const data = await getAllPokemon(page, 30);
-      setPokemonList(data.pokemons);
-      setCurrentPage(data.currentPage);
-      setTotalPages(data.totalPages);
-    } catch (err) {
-      if (err.message.includes("401") || err.message.includes("403")) {
-        auth.logout();
-      } else {
-        setError("Failed to fetch Pokémon. Please try again later.");
+  const fetchPokemon = useCallback(
+    async (page) => {
+      if (!auth.isAuthenticated) {
+        setInitialLoading(false);
+        return;
       }
-    } finally {
-      setInitialLoading(false);
-    }
-  }, [auth]);
+      try {
+        setInitialLoading(true);
+        const data = await getAllPokemon(page, 30);
+        setPokemonList(data.pokemons);
+        setCurrentPage(data.currentPage);
+        setTotalPages(data.totalPages);
+      } catch (err) {
+        if (err.message.includes("401") || err.message.includes("403")) {
+          auth.logout();
+        } else {
+          setError("Failed to fetch Pokémon. Please try again later.");
+        }
+      } finally {
+        setInitialLoading(false);
+      }
+    },
+    [auth]
+  );
 
   useEffect(() => {
     // Read page from URL query params if available, otherwise use 1
     const params = new URLSearchParams(location.search);
-    const page = parseInt(params.get('page')) || 1;
+    const page = parseInt(params.get("page")) || 1;
     setCurrentPage(page);
     fetchPokemon(page);
   }, [fetchPokemon, location.search]);
@@ -95,7 +102,7 @@ function PokemonListPage() {
 
   const handleLogout = () => {
     auth.logout();
-    navigate('/login');
+    navigate("/login");
   };
 
   const displayList = pokemonData.length > 0 ? pokemonData : pokemonList;
@@ -110,9 +117,16 @@ function PokemonListPage() {
 
   return (
     <div className="container">
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          mb: 2,
+        }}
+      >
         <h1>Pokémon List</h1>
-        <Box sx={{ display: 'flex', gap: 1 }}>
+        <Box sx={{ display: "flex", gap: 1 }}>
           <Button
             onClick={handleAddPokemonClick}
             variant="contained"
@@ -120,11 +134,7 @@ function PokemonListPage() {
           >
             Novo Pokémon
           </Button>
-          <Button
-            onClick={handleLogout}
-            variant="contained"
-            color="error"
-          >
+          <Button onClick={handleLogout} variant="contained" color="error">
             Logout
           </Button>
         </Box>
@@ -194,7 +204,11 @@ function PokemonListPage() {
                           color="primary"
                           size="small"
                           startIcon={<EditIcon />}
-                          onClick={() => handleEditPokemon(pokemon.id)}
+                          onClick={() =>
+                            navigate(`/edit/${pokemon.id}`, {
+                              state: { pokemon },
+                            })
+                          }
                         >
                           Editar
                         </Button>

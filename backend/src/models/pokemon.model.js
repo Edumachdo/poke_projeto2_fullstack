@@ -38,6 +38,21 @@ const Pokemon = {
     return { pokemons, totalItems };
   },
 
+  findById: async (id) => {
+    const sql = 'SELECT id, name, data FROM Pokemon WHERE id = ?';
+    const [rows] = await pool.query(sql, [id]);
+    if (rows.length === 0) {
+      return null;
+    }
+    const row = rows[0];
+    const data = typeof row.data === 'string' ? JSON.parse(row.data) : row.data;
+    return {
+      id: row.id,
+      name: row.name,
+      ...data,
+    };
+  },
+
   create: async ({ id, name, data }) => {
     const sql = 'INSERT INTO Pokemon (id, name, data) VALUES (?, ?, ?)';
     const [result] = await pool.query(sql, [id, name, JSON.stringify(data)]);

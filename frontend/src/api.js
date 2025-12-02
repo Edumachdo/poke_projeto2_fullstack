@@ -128,6 +128,8 @@ export const getAllPokemon = (page = 1, limit = 30) => {
   return get('/pokemon', { page, limit });
 };
 
+export const getPokemonById = (id) => get(`/pokemon/${id}`);
+
 export const deletePokemon = (id) => del(`/pokemon/${id}`);
 
 export const updatePokemon = (id, data) => put(`/pokemon/${id}`, data);
